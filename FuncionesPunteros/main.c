@@ -3,7 +3,7 @@
 
 void intercambiar(int numUno, int numDos);
 void intercambiarConPunteros(int *numUno, int *numDos);
-
+void ponerEnCero(int *numUno);
 
 int main()
 {
@@ -11,6 +11,8 @@ int main()
     int edadDos;
     edadUno=22;
     edadDos=99;
+
+    ponerEnCero(&edadDos);
     //intercambiar(edadUno,edadDos);
     intercambiarConPunteros(&edadUno,&edadDos);//Se puede pasar un puntero con *
     printf("\nEdad 1:%d",edadUno);
@@ -33,4 +35,9 @@ void intercambiarConPunteros(int *numUno, int *numDos)//Deberia validar con if p
     aux=*numUno;
     *numUno=*numDos;
     *numDos=aux;
+}
+
+void ponerEnCero(int *numUno)
+{
+    *numUno=0;
 }
